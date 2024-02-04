@@ -3,14 +3,16 @@ import Books from './pages/Books'
 import Add from './pages/Add'
 import Update from './pages/Update'
 
+import './styles.css'
+
 function App() {
   return (
-    <main>
+    <main className="app">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Books />} />
           <Route path="/add" element={<Add />} />
-          <Route path="/update" element={<Update />} />
+          <Route path="/update/:id" element={<Update />} />
         </Routes>
       </BrowserRouter>
     </main>

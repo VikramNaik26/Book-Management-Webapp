@@ -2,6 +2,8 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
+import '../styles.css'
+
 const Add = () => {
   const [book, setBook] = useState({
     title: '',
@@ -13,9 +15,9 @@ const Add = () => {
   const navigate = useNavigate()
 
   const handleChange = (e) => {
-    setBook((prev) => ({ ...book, [e.target.name]: e.target.value }))
+    setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
-  console.log(book)
+  // console.log(book)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
